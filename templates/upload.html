@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PDF Upload</title>
+  </head>
+  <body>
+    <h1>Navegar através de um PDF sem estrutura</h1>
+    <form action="/extract/" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" />
+      <button type="submit">Extract Text</button>
+    </form>
+    <br />
+    <h1>Navegar através de um PDF diagramado</h1>
+    <form
+      action="/extract_diagrammed/"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <input type="file" name="file" />
+      <button type="submit">Extract Text</button>
+    </form>
+    <br />
+    <h1>PDF estruturado em forma de tabelas</h1>
+    <form
+      action="/extract_tabular/"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <input type="file" name="file" />
+      <button type="submit">Extract Text</button>
+    </form>
+  </body>
+</html>

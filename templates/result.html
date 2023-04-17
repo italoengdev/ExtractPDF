@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Extracted Text</title>
+  </head>
+  <body>
+    <h1>Extracted Text</h1>
+    <p>Filename: {{ filename }}</p>
+    <p>Text: {{ text }}</p>
+    {% if table %}
+    <table>
+      <thead>
+        <tr>
+          {% for header in table[0] %}
+          <th>{{ header }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in table[1:] %}
+        <tr>
+          {% for cell in row %}
+          <td>{{ cell }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p>No table data found.</p>
+    {% endif %}
+
+    <p>Extracted element: {{ element }}</p>
+  </body>
+</html>
